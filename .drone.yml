@@ -9,6 +9,7 @@ steps:
   image: plugins/docker
   settings:
     username: yichuan95
-    password: 4df5faa8-4e1d-4a26-b8fe-69bc61f0dcef
+    password:
+      from_secret:mydronesecret
     repo: yichuan95/dotnetcore-container
     dockerfile: Web/Dockerfile
