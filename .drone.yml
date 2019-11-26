@@ -4,7 +4,9 @@ name: default
 steps:
 - name: compile
   image: microsoft/aspnetcore-build
-  command: sh ~/build.sh
+  command: 
+    - sh build.sh
 - name: build-image:
   image: microsoft/aspnetcore-build
-  command: docker build -t yichuan95/dotnetcore-container ./Web
+  command: 
+    - docker build -t yichuan95/dotnetcore-container ./Web
