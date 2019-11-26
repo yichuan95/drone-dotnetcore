@@ -4,9 +4,8 @@ name: default
 steps:
 - name: compile
   image: microsoft/aspnetcore-build
-  commands:
+  command:
     - sh build.sh
-
 - name: build-image:
   image: microsoft/aspnetcore-build
   command:
