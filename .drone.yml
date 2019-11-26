@@ -1,12 +1,14 @@
 kind: pipeline
-name: default
 
 steps:
 - name: compile
-  image: microsoft/aspnetcore-build
-  command: 
+  image: microsoft/dotnet:sdk
+  commands:
     - sh build.sh
-- name: build-image:
-  image: microsoft/aspnetcore-build
-  command: 
-    - docker build -t yichuan95/dotnetcore-container ./Web
+- name: build-image
+  image: plugins/docker
+  settings:
+    username: yichuan95
+    password: 4df5faa8-4e1d-4a26-b8fe-69bc61f0dcef
+    repo: yichuan95/dotnetcore-container
+    dockerfile: Web/Dockerfile
