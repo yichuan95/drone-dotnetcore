@@ -8,7 +8,7 @@ steps:
 - name: build-image
   image: plugins/docker
   settings:
-    username: yichuan95
+    username: yichuan95 
     password:
       from_secret: mydronesecret
     repo: yichuan95/dotnetcore-container
