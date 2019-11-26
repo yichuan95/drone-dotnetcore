@@ -10,6 +10,6 @@ steps:
   settings:
     username: yichuan95
     password:
-      from_secret:mydronesecret
+      from_secret: mydronesecret
     repo: yichuan95/dotnetcore-container
     dockerfile: Web/Dockerfile
